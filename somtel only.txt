@@ -1,0 +1,365 @@
+#include<iostream>
+using namespace std;
+
+class SOMTEL_Service{
+	private:
+		int choice;
+		char info[20];
+		int number;
+		double money;
+		double pin;
+		double send;	//waa lacag dirida
+		double balance;	//waa hadhaaga
+		double dollar,shl,option;
+
+	public:
+		void menu();
+		void Daara_Salaam();
+		void Ku_iibso();
+		void Sarifle();
+		void Dhaqdhaqaaq();
+		void Voucher();
+		void Dirid();
+		void Labixid();
+};
+
+	//ZAAD SERVICE MENUS
+	void SOMTEL_Service::menu(){
+
+		balance=2000;
+
+	int choice;//For reading input from the user
+	cout<<"\t <--SOMTEL_Service-->"<<endl;
+		cout<<"1:Eeg Hadhaaga"<<endl;
+		cout<<"2:Lacag Dirid"<<endl;
+		cout<<"3:Lacag Labixid"<<endl;
+		cout<<"4:Ku iibso"<<endl;
+		cout<<"5:Itus Dhaqdhaqaaq"<<endl;
+		cout<<"6:Sarifle"<<endl;
+		cout<<"7:Ka Bax"<<endl;
+
+	cin>>choice;
+	if(choice==1){
+		cout<<"Hadhaagaagu waa: "<<balance<<"$"<<endl;
+		cout<<"1. Back"<<endl;
+		cout<<"2. EXIT"<<endl;
+
+		cin>>choice;
+		if(choice==1){
+			menu();
+		}
+		if(choice==2){
+			cout<<"waxaad kabaxdayday SOMTEL_Service"<<endl;
+		}
+	}
+	//Number-ka 2aad
+
+	if(choice==2){
+			Dirid();
+		}
+	//Number-ka 3aad
+	if(choice==3){
+		Labixid();
+	}
+	//Number-ka 4aad
+
+	if(choice==4){
+			Ku_iibso();
+		}
+	//Number-ka 3aad
+	//DOORASHADA DARASALAAM BANK
+		if(choice==8){
+			Daara_Salaam();
+		}
+		//Number-ka 4aad
+		if(choice==7){
+			cout<<"waxaad kabaxdayday SOMTEL_Service"<<endl;
+		}
+		// Numberka 5aad
+		if(choice==5)
+		{
+			Dhaqdhaqaaq();
+		}
+		// Numberka 6aad
+		if(choice==6)
+		{
+			Sarifle();
+		}
+
+		//Number-ka 10aad
+	if(choice==10){
+		cout<<"waxaad exitday SOMTEL_Service"<<endl;
+	}
+}
+
+//DEFINE FUNCTION -- DARA-SALAAM BANK
+void SOMTEL_Service::Daara_Salaam(){
+			cout<<"\t <--Daara-salaam Bank-->"<<endl;
+			cout<<"1. Itus Hadhaaga"<<endl;
+			cout<<"2. Lacag Dhigasho"<<endl;
+			cout<<"3. Lacag Qaadasho"<<endl;
+			cout<<"4. Back"<<endl;
+			cout<<"5. exit"<<endl;
+
+			cin>>choice;
+			//-------------------//
+			if(choice==1){
+				cout<<"\t <--Daara-salaam Bank-->"<<endl;
+				cout<<"1. Itus Hadhaaga"<<endl;
+			}
+			//------------------//
+			if(choice==2){
+				cout<<"\t <--Daara-salaam Bank-->"<<endl;
+				cout<<"Fadlan Geli lacagta"<<endl;
+				cin>>money;
+
+				cout<<"\t <--Daara-salaam Bank-->"<<endl;
+
+				cout<<"Fadlan Geli Macluumaadka"<<endl;
+				cin>>info;
+				
+
+				cout<<"\t <--Daara-salaam Bank-->"<<endl;
+
+				cout<<"Fadlan Geli numberkaaga sirta ee bangiga"<<endl;
+				cin>>pin;
+
+				cout<<"\t <--Daara-salaam Bank-->"<<endl;
+
+				cout<<"ma hubtaa inaad "<<money<<"$"<<endl,
+				cout<<"dhigatid Account-kaaga bangiga"<<endl;
+				cout<<"1. are you sure to continue"<<endl;
+				cout<<"2. are you sure to cencel"<<endl;
+
+				//--Daarasalaam-number-2 / --- number-1aad//
+				cin>>choice;
+				if(choice==1){
+				cout<<"\t <--Daara-salaam Bank-->"<<endl;
+				send = balance+money;
+				cout<<"Waxaad Dhigatay "<<money<<"$"<<endl,
+				cout<<"Account-kaaga bangiga"<<endl,
+				cout<<"Hadhaagaaguna waa "<<send<<"$"<<endl;
+				cout<<"1. BACK"<<endl;
+				cout<<"2. EXIT"<<endl;
+
+				cin>>choice;
+				system("cls");
+				if(choice==1){
+					Daara_Salaam();
+				}
+				if(choice==2){
+					cout<<"waxaad exitday SOMTEL_Service"<<endl;
+				}
+				}
+				//choice 2aad
+				if(choice==2){
+					Daara_Salaam();
+				}
+			}
+				if(choice==3){
+					cout<<"\t <--Daara-salaam Bank-->"<<endl;
+					cout<<"Fadlna Geli lacagta aad qaadaysid"<<endl;
+					cin>>money;
+					cout<<"Ma Hubtaa inaad qaadatid "<<money<<"$"<<endl;
+					cout<<"1. are you sure to continue"<<endl;
+					cout<<"2. are you sure to cencel"<<endl;
+
+				}
+				if(choice==4){
+					menu();
+				}
+				if(choice==5){
+					cout<<"waxaad exitay SOMTEL_Service"<<endl;
+				}
+}
+	void SOMTEL_Service::Ku_iibso(){
+		cout<<"\t <--KU IIBSO-->"<<endl;
+		cout<<"Fadlan Geli number-ka ku iibsa da ah"<<endl;
+		cin>>number;
+
+		cout<<"\t <--KU IIBSO-->"<<endl;
+
+		cout<<"Fadlan Geli Lacagta aad u diraysid"<<endl;
+		cin>>money;
+
+		cout<<"\t <--KU IIBSO-->"<<endl;
+
+		send = balance-money;
+		cout<<"Ma Hubtaad inaad udirtid number-kan "<<number<<endl,
+		cout<<"Lacagta ah "<<money<<"$"<<endl;
+		cout<<"1. are you sure to continue"<<endl;
+		cout<<"2. are you sure to cencel"<<endl;
+
+		cin>>choice;
+		system("cls");
+		if(choice==1){
+			cout<<"\t <--KU IIBSO-->"<<endl;
+
+		cout<<"Waxaad Number kan "<<number<<endl,
+		cout<<"Udirtay lacagta ah "<<money<<"$"<<endl,
+		cout<<"Hadhaagaaguna waa "<<send<<"$"<<endl;
+
+		cout<<"1. Back"<<endl;
+		cin>>choice;
+		if(choice==1){
+			menu();
+		}
+		}
+		if(choice==2){
+			menu();
+		}
+	}
+//--- SARIFLE CODE ---//
+	void SOMTEL_Service::Sarifle(){
+		cout<<"\t<-- SARIFLE -->"<<endl;
+	cout<<"1.Shilling"<<endl;
+	cout<<"2.Dollar"<<endl;
+
+	cin>>option;
+
+	if(option==1){
+		cout<<"\tSARIFLE\n"<<endl;
+	cout<<"Gali Lacagta Shilling ka ah"<<endl;
+	cin>>shl;
+	system("cls");
+	shl=shl/8600;
+	cout<<"\tSARIFLE\n"<<endl;
+	cout<<"lacagta aad sarifatay ee "<<endl,
+	cout<<"dollar ka ah waa: "<<shl<<"$"<<endl;
+
+	cout<<"1. BACK"<<endl;
+
+	cin>>choice;
+		system("cls");
+		if(choice==1){
+			menu();
+		}
+	}
+	else
+	if(option==2){
+		cout<<"\tSARIFLE\n"<<endl;
+		cout<<"Gali Lacagta Dollar ka ah"<<endl<<endl;
+	cin>>shl;
+	shl=shl*8600;
+	cout<<"\tSARIFLE\n"<<endl;
+	cout<<"lacagta aad sarifatay ee "<<endl,
+	cout<<"Shilling ka ah waa: "<<shl<<"shl"<<endl;
+
+	cout<<"1. BACK"<<endl;
+
+	cin>>choice;
+		if(choice==1){
+			menu();
+		}
+	}
+	}
+	//--- Dhaqdhaqaaq CODE ---//
+	void SOMTEL_Service::Dhaqdhaqaaq(){
+		cout<<"\t<-- Itus Dhaqdhaqaaqa -->"<<endl;
+		cout<<"1. Dhaqdhaqaaq kaliya"<<endl;
+		cout<<"2. Warbixin kooban"<<endl;
+		cout<<"3. ka bax"<<endl;
+		cin>>choice;
+		if(choice==1){
+			cout<<"100$ Ayaad u dirtay \n",
+			cout<<"Clever programmer Hadhaaguna waa",
+			cout<<"200$"<<endl;
+		}
+		else if(choice==2){
+			cout<<"1. Dhaqdhaqaaqii ugu danbeeyey"<<endl;
+			cout<<"2. wax iibsigii ugu danbeeyey"<<endl;
+			cout<<"3. exit"<<endl;
+		}
+		else if(choice==3){
+			menu();
+		}
+	}
+
+	//--- Dhaqdhaqaaq CODE ---//
+	void SOMTEL_Service::Voucher(){
+		cout<<"\t<-- E-Voucher -->"<<endl;
+		cout<<"1. Ku Shbo Lacag"<<endl;
+		cout<<"2. exit"<<endl;
+
+		cin>>choice;
+		system("cls");
+		if(choice==1){
+			cout<<"Fadlan Gali lacagta"<<endl;
+			cin>>money;
+			system("cls");
+			cout<<"Ma Hubtaa in aad ku shubto "<<money<<"$"<<endl;
+			cout<<"1. are you sure to continue"<<endl;
+			cout<<"2. are you sure to cencel"<<endl;
+			cin>>choice;
+			system("cls");
+			if(choice==1){
+				send = balance-money;
+				cout<<"Waxaad ku shubatay "<<money<<"$"<<endl,
+				cout<<"Hadhaagaaguna waa "<<send<<"$";
+			}
+			else if(choice==2){
+				Voucher();
+			}
+		else if(choice==2){
+			menu();
+		}
+		}
+}
+//Lacg Dirid
+void SOMTEL_Service::Dirid(){
+		cout<<"\t <--SOMTEL_Service-->"<<endl;
+		cout<<"Fadlan Numbar ka aad lacagta u diraysid"<<endl;
+		cin>>number;
+		cout<<"Fadlan gali Lacagta aad diraysid"<<endl;
+		cin>>money;
+		send = balance-money;
+		cout<<"Waxaad lacag u dirtay number ka "<<number<<endl,
+		cout<<"Lacagta ah "<<money<<"$"<<endl,
+		cout<<"Hadhaagaaguna waa "<<send<<"$"<<endl;
+
+		cout<<"1. Back"<<endl;
+		cin>>choice;
+		if(choice==1){
+			menu();
+		}
+
+	}
+	void SOMTEL_Service::Labixid(){
+		cout<<"\t <--SOMTEL_Service-->"<<endl;
+		cout<<"Fadlan Gali Lacagta aad labaxaysid"<<endl;
+		cin>>money;
+		cout<<"Ma Hubtaa inaad la baxaysid lacagta ah "<<money<<"$"<<endl;
+		cout<<"1. are you sure to continue"<<endl;
+		cout<<"2. are you sure to cencel"<<endl;
+		cin>>choice;
+		if(choice==1){
+			cout<<"\t <--SOMTEL_Service-->"<<endl;
+			send = balance-money;
+			cout<<"Waxa la Baxday lacagta ah "<<money<<"$"<<endl,
+			cout<<"Hadhaagaaguna waa "<<send<<"$"<<endl;
+		}
+		else if(choice==2){
+			Labixid();
+		}
+}
+
+int main(){
+	double pin;
+	cout<<"<-Somtel SERVICES->"<<endl;
+	cout<<"Fadlan Gali PIN-kaaga(Enter Your PIN)"<<endl;
+	//pin-ka Zaad-ka
+	pin=2390;
+	cin>>pin;
+	if(pin==123){
+		/*Zaad_Service
+		 class run the program*/
+	SOMTEL_Service somtel;
+	somtel.menu();
+}
+else
+		{
+			cout<<"Pin-kaagu waa khalad"<<endl;
+		}
+
+	return 0;
+}
